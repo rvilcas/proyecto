@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="URDF_Braccio">
+
+  <!-- Color of materials -->
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+  <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://proy/meshes/base_link.STL" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <link name="E1">
+    <visual>
+      <geometry>
+        <mesh filename="package://proy/meshes/E1.STL" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="J1" type="revolute">
+    <parent link="base_link" />
+    <child link="E1" />
+    <origin xyz="-0.03652 -0.49884 -0.014347" rpy="1.5708 -1.4977 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="300" velocity="0.1" lower="-3.1" upper="3.1"/>
+  </joint>
+
+  <link name="E2">
+    <visual>
+      <geometry>
+        <mesh
+          filename="package://proy/meshes/E2.STL" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="J2" type="revolute">
+    <parent link="E1" />
+    <child link="E2" />
+    <origin xyz="0.00105 -0.0017952 0.15134" rpy="-0.08667 0 0" />
+    <axis xyz="1 0 0" />
+    <limit effort="300" velocity="0.1" lower="-3.1" upper="3.1"/>
+  </joint>
+
+  <link name="E3">
+    <visual>
+      <geometry>
+        <mesh
+          filename="package://proy/meshes/E3.STL" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="J3" type="revolute">
+    <parent link="E2" />
+    <child link="E3" />
+    <origin xyz="6.5E-05 0 0.34209" rpy="0 -0.49203 -1.5708" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="E4">
+    <visual>
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E4.STL" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="J4" type="revolute">
+    <parent link="E3" />
+    <child link="E4" />
+    <origin xyz="0 0.0070657 0.30651" rpy="0.34787 0 0" />
+    <axis xyz="1 0 0" />
+  </joint>
+
+  <link
+    name="E5">
+    
+    <visual>
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E5.STL" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="J5" type="revolute">
+    <parent link="E4" />
+    <child link="E5" />
+    <origin xyz="0.068835 -0.071042 0.32965" rpy="-0.53199 0 0" />
+    <axis xyz="1 0 0" />
+  </joint>
+
+  <link
+    name="E6">
+    
+    <visual>
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E6.STL" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="J6" type="revolute">
+    <parent link="E5" />
+    <child link="E6" />
+    <origin xyz="-0.07444 -0.085084 0.046369" rpy="-3.1415 1.3048 0.00012546" />
+    <axis xyz="0.25143 -0.96545 0.068491" />
+  </joint>
+</robot>

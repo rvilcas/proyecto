@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF Braccio">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.03652 -0.37323 -0.014347"
+        rpy="0 0 0" />
+      <mass
+        value="13.783" />
+      <inertia
+        ixx="0.1324"
+        ixy="-6.8404E-18"
+        ixz="-1.0678E-33"
+        iyy="0.18314"
+        iyz="-3.1068E-18"
+        izz="0.1324" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="E1">
+    <inertial>
+      <origin
+        xyz="-2.171E-05 -0.0052676 0.064163"
+        rpy="0 0 0" />
+      <mass
+        value="8.2222" />
+      <inertia
+        ixx="0.064798"
+        ixy="7.3708E-07"
+        ixz="7.1521E-06"
+        iyy="0.085982"
+        iyz="0.00031541"
+        izz="0.080171" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="continuous">
+    <origin
+      xyz="-0.03652 -0.49884 -0.014347"
+      rpy="1.5708 -1.4977 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="E1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="E2">
+    <inertial>
+      <origin
+        xyz="-8.5512E-08 0.0069932 0.1882"
+        rpy="0 0 0" />
+      <mass
+        value="2.6131" />
+      <inertia
+        ixx="0.029764"
+        ixy="5.982E-10"
+        ixz="3.382E-08"
+        iyy="0.032027"
+        iyz="-0.0010856"
+        izz="0.0060768" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="continuous">
+    <origin
+      xyz="0.00105 -0.0017952 0.15134"
+      rpy="-0.08667 0 0" />
+    <parent
+      link="E1" />
+    <child
+      link="E2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="E3">
+    <inertial>
+      <origin
+        xyz="-0.01195 2.3592E-16 0.24325"
+        rpy="0 0 0" />
+      <mass
+        value="1.9394" />
+      <inertia
+        ixx="0.034478"
+        ixy="-3.8673E-19"
+        ixz="-9.6819E-17"
+        iyy="0.034608"
+        iyz="-1.9434E-17"
+        izz="0.0031081" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="continuous">
+    <origin
+      xyz="6.5E-05 0 0.34209"
+      rpy="0 -0.49203 -1.5708" />
+    <parent
+      link="E2" />
+    <child
+      link="E3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="E4">
+    <inertial>
+      <origin
+        xyz="-0.01195 -0.0033472 0.1827"
+        rpy="0 0 0" />
+      <mass
+        value="2.7928" />
+      <inertia
+        ixx="0.035308"
+        ixy="-2.1705E-09"
+        ixz="3.6325E-08"
+        iyy="0.038151"
+        iyz="0.001085"
+        izz="0.0069241" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="continuous">
+    <origin
+      xyz="0 0.0070657 0.30651"
+      rpy="0.34787 0 0" />
+    <parent
+      link="E3" />
+    <child
+      link="E4" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="E5">
+    <inertial>
+      <origin
+        xyz="-0.082682 -0.020979 0.064861"
+        rpy="0 0 0" />
+      <mass
+        value="0.71537" />
+      <inertia
+        ixx="0.0034266"
+        ixy="2.2546E-06"
+        ixz="-6.1444E-07"
+        iyy="0.0030752"
+        iyz="0.00055585"
+        izz="0.0049412" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="continuous">
+    <origin
+      xyz="0.068835 -0.071042 0.32965"
+      rpy="-0.53199 0 0" />
+    <parent
+      link="E4" />
+    <child
+      link="E5" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="E6">
+    <inertial>
+      <origin
+        xyz="-0.058973 0.0443 -0.0046587"
+        rpy="0 0 0" />
+      <mass
+        value="0.38758" />
+      <inertia
+        ixx="0.0007629"
+        ixy="0.00012504"
+        ixz="-9.1614E-06"
+        iyy="0.00072999"
+        iyz="-4.5962E-06"
+        izz="0.00066271" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF Braccio/meshes/E6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="continuous">
+    <origin
+      xyz="-0.07444 -0.085084 0.046369"
+      rpy="-3.1415 1.3048 0.00012546" />
+    <parent
+      link="E5" />
+    <child
+      link="E6" />
+    <axis
+      xyz="0.25143 -0.96545 0.068491" />
+  </joint>
+</robot>
